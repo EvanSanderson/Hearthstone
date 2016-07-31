@@ -1,0 +1,21 @@
+<%= form_for :deck, url: decks_path do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+</p>
+
+<p>
+  <%= f.label :character_class%>
+  <%= f.text_field :character_class%>
+</p>
+
+<p>
+  <%= f.label :style%>
+  <%= f.text_field :style%>
+</p>
+
+<p>
+  <%= f.submit%>
+</p>
+
+<%end%>

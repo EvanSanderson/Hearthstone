@@ -1,0 +1,8 @@
+<h1> Decks! </h1>
+<%= link_to 'Create a New Deck', new_deck_path%>
+<% @decks.each do |deck| %>
+ <%= link_to deck.name, deck_path(deck) %></p>
+<p> <%=deck.character_class%></p>
+<p> <%=deck.style%></p>
+
+<%end%>
