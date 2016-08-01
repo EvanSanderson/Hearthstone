@@ -1,0 +1,7 @@
+<p> <%=card.name%> </p>
+<p> <%=card.effect%> </p>
+<p> <%=card.attack%> </p>
+<p> <%=card.defense%> </p>
+
+<p> <%=link_to 'Delete Card', [card.deck, card], method: :delete, data: { confirm: 'You sure?'}%>
+</p>

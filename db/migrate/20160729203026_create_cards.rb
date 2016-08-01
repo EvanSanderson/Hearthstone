@@ -5,7 +5,7 @@ class CreateCards < ActiveRecord::Migration[5.0]
       t.string :effect
       t.integer :attack
       t.integer :defense
-      t.integer :decks_id
+      t.references :deck, foreign_key: true
       t.timestamps
     end
   end

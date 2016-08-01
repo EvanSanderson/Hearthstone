@@ -1,0 +1,25 @@
+<%= form_for([@deck, @deck.cards.build]) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </p>
+
+  <p>
+    <%= f.label :effect %>
+    <%= f.text_field :effect%>
+  </p>
+
+  <p>
+    <%= f.label :attack %>
+    <%= f.text_field :attack%>
+  </p>
+
+  <p>
+    <%= f.label :defense %>
+    <%= f.text_field :defense%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<%end%>

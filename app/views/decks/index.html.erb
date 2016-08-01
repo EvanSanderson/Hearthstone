@@ -4,5 +4,7 @@
  <%= link_to deck.name, deck_path(deck) %></p>
 <p> <%=deck.character_class%></p>
 <p> <%=deck.style%></p>
-
+<p> <%= link_to 'Edit This Deck', edit_deck_path(deck)%>
+<p> <%= link_to 'Delete This Deck', deck_path(deck), method: :delete, data: {confirm: 'Are you sure?'}%> </p>
+  <br>
 <%end%>

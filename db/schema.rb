@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20160729203026) do
 
-
-  create_table "decks", force: :cascade do |t|
-    t.string   "name"
-    t.string   "character_class"
-    t.string   "style"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "cards", force: :cascade do |t|
     t.string   "name"
     t.string   "effect"
@@ -29,8 +20,15 @@ ActiveRecord::Schema.define(version: 20160729203026) do
     t.integer  "deck_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["deck_id"], name: "index_cards_on_deck_id"
   end
 
-  add_foreign_key "cards", "decks"
+  create_table "decks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "character_class"
+    t.string   "style"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end

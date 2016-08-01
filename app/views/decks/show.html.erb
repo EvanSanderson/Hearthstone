@@ -3,3 +3,11 @@
 <h1><%=@deck.name%></h1>
 <p><%=@deck.character_class%></p>
 <p><%=@deck.style%></p>
+
+<h1> Cards! </h1>
+<%= render @deck.cards %>
+
+<h2> Add a card: </h2>
+<%= render 'cards/form' %>
+
+<%= link_to "Edit This Deck", edit_deck_path(@deck)%>
